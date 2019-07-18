@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.zsc.myhome_wallpaper.mapper.WallPaperMapper">
+
+    <select id="findAll" resultType="cn.zsc.myhome_model.table.WallPaper">
+      select * from wall_paper where disable = 0;
+    </select>
+
+    <select id="allNum" resultType="java.lang.Integer">
+        select count(*) from wall_paper where disable = 0;
+    </select>
+
+</mapper>
